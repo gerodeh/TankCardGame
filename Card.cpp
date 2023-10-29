@@ -138,6 +138,20 @@ void Card::InitCard()
         this->sprite.setTexture(&this->game->texturemanager.GetTextureRef("TigerII"));
         break;
 
+        case Card::CardNames::PzI:
+        this->hp = cur_hp = 1;
+        this->dmg = cur_dmg = 0;
+        this->acr = cur_acr = 3;
+        this->penetration = 0;
+        this->income = 0;
+        this->cost = 0;
+        this->cardType  = Card::CardTypes::LightTank;
+        this->cardNation = Card::CardNations::Wehrmacht;
+        this->cardAbility = Card::CardAbilities::None;
+        this->cardAttackDirection = Card::CardAttackDirections::Forward;
+        this->sprite.setTexture(&this->game->texturemanager.GetTextureRef("Pz.I"));
+        break;
+
         case Card::CardNames::PzIII:
         this->hp = cur_hp = 1;
         this->dmg = cur_dmg = 1;
@@ -150,6 +164,118 @@ void Card::InitCard()
         this->cardAbility = Card::CardAbilities::None;
         this->cardAttackDirection = Card::CardAttackDirections::Forward;
         this->sprite.setTexture(&this->game->texturemanager.GetTextureRef("Pz.III"));
+        break;
+
+        case Card::CardNames::IS_1:
+        this->hp = cur_hp = 4;
+        this->dmg = cur_dmg = 2;
+        this->acr = cur_acr = 3;
+        this->penetration = 0;
+        this->income = 3;
+        this->cost = 5;
+        this->cardType  = Card::CardTypes::HeavyTank;
+        this->cardNation = Card::CardNations::USSR;
+        this->cardAbility = Card::CardAbilities::Ricochet_if_1;
+        this->cardAttackDirection = Card::CardAttackDirections::Forward;
+        this->sprite.setTexture(&this->game->texturemanager.GetTextureRef("IS-1"));
+        break;
+
+        case Card::CardNames::KV_1:
+        this->hp = cur_hp = 3;
+        this->dmg = cur_dmg = 1;
+        this->acr = cur_acr = 3;
+        this->penetration = 0;
+        this->income = 2;
+        this->cost = 3;
+        this->cardType  = Card::CardTypes::HeavyTank;
+        this->cardNation = Card::CardNations::USSR;
+        this->cardAbility = Card::CardAbilities::Endurance_1_if_enemy_more_than_3;
+        this->cardAttackDirection = Card::CardAttackDirections::Forward;
+        this->sprite.setTexture(&this->game->texturemanager.GetTextureRef("KV-1"));
+        break;
+
+        case Card::CardNames::SU_152:
+        this->hp = cur_hp = 2;
+        this->dmg = cur_dmg = 1;
+        this->acr = cur_acr = 3;
+        this->penetration = 0;
+        this->income = 2;
+        this->cost = 4;
+        this->cardType  = Card::CardTypes::TankDestroyer;
+        this->cardNation = Card::CardNations::USSR;
+        this->cardAbility = Card::CardAbilities::Damage_4_if_MT_and_LT;
+        this->cardAttackDirection = Card::CardAttackDirections::Forward;
+        this->sprite.setTexture(&this->game->texturemanager.GetTextureRef("SU-152"));
+        break;
+
+        case Card::CardNames::ISU_152:
+        this->hp = cur_hp = 3;
+        this->dmg = cur_dmg = 2;
+        this->acr = cur_acr = 3;
+        this->penetration = 0;
+        this->income = 3;
+        this->cost = 5;
+        this->cardType  = Card::CardTypes::TankDestroyer;
+        this->cardNation = Card::CardNations::USSR;
+        this->cardAbility = Card::CardAbilities::Damage_4_if_MT_and_LT;
+        this->cardAttackDirection = Card::CardAttackDirections::Forward;
+        this->sprite.setTexture(&this->game->texturemanager.GetTextureRef("ISU-152"));
+        break;
+
+        case Card::CardNames::Panther:
+        this->hp = cur_hp = 3;
+        this->dmg = cur_dmg = 1;
+        this->acr = cur_acr = 4;
+        this->penetration = 0;
+        this->income = 2;
+        this->cost = 3;
+        this->cardType  = Card::CardTypes::MediumTank;
+        this->cardNation = Card::CardNations::Wehrmacht;
+        this->cardAbility = Card::CardAbilities::Protection_1_if_1;
+        this->cardAttackDirection = Card::CardAttackDirections::Forward;
+        this->sprite.setTexture(&this->game->texturemanager.GetTextureRef("Panther"));
+        break;
+
+        case Card::CardNames::Lowe:
+        this->hp = cur_hp = 3;
+        this->dmg = cur_dmg = 2;
+        this->acr = cur_acr = 4;
+        this->penetration = 0;
+        this->income = 3;
+        this->cost = 6;
+        this->cardType  = Card::CardTypes::HeavyTank;
+        this->cardNation = Card::CardNations::Wehrmacht;
+        this->cardAbility = Card::CardAbilities::Only_1_DMG;
+        this->cardAttackDirection = Card::CardAttackDirections::Forward;
+        this->sprite.setTexture(&this->game->texturemanager.GetTextureRef("Lowe"));
+        break;
+
+        case Card::CardNames::MarderI:
+        this->hp = cur_hp = 1;
+        this->dmg = cur_dmg = 2;
+        this->acr = cur_acr = 4;
+        this->penetration = 1;
+        this->income = 2;
+        this->cost = 4;
+        this->cardType  = Card::CardTypes::HeavyTank;
+        this->cardNation = Card::CardNations::Wehrmacht;
+        this->cardAbility = Card::CardAbilities::Only_1_DMG;
+        this->cardAttackDirection = Card::CardAttackDirections::ThreeLines;
+        this->sprite.setTexture(&this->game->texturemanager.GetTextureRef("MarderI"));
+        break;
+
+        case Card::CardNames::StugIIIG:
+        this->hp = cur_hp = 2;
+        this->dmg = cur_dmg = 2;
+        this->acr = cur_acr = 4;
+        this->penetration = 0;
+        this->income = 2;
+        this->cost = 3;
+        this->cardType  = Card::CardTypes::TankDestroyer;
+        this->cardNation = Card::CardNations::Wehrmacht;
+        this->cardAbility = Card::CardAbilities::Get_1_Acr_if_HT;
+        this->cardAttackDirection = Card::CardAttackDirections::Forward;
+        this->sprite.setTexture(&this->game->texturemanager.GetTextureRef("StugIIIG"));
         break;
     }
 
@@ -330,6 +456,15 @@ sf::RectangleShape& Card::GetBackRect()
     return this->backrect;
 }
 
+void Card::Update()
+{
+    labels[0]->SetString(std::to_string(this->cur_hp));
+    labels[1]->SetString(std::to_string(this->cur_dmg));
+    labels[2]->SetString(std::to_string(this->cost));
+    labels[3]->SetString(std::to_string(this->cur_acr));
+    if (armor > 0) labels[5]->SetString(std::to_string(this->cur_armor));
+}
+
 std::string Card::GetCardNameInString()
 {
     switch (this->cardName)
@@ -374,7 +509,7 @@ std::string Card::GetCardNameInString()
             return "PzIII";
         break;
     }
-    return "Nothing";
+    return "Tank";
 }
 
 /*

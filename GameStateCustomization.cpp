@@ -20,7 +20,7 @@ void GameStateCustomization::CreateGeneralCards(std::vector<std::vector<Card*>>&
     tmpvector[2]->CardID = 2;
     tmpvector.push_back(new Card(this->game, Card::CardNames::SU_100));
     tmpvector[3]->CardID = 3;
-    tmpvector.push_back(new Card(this->game, Card::CardNames::MS_1));
+    tmpvector.push_back(new Card(this->game, Card::CardNames::KV_1));
     tmpvector[4]->CardID = 4;
     tmpvector.push_back(new Card(this->game, Card::CardNames::LTvz38));
     tmpvector[5]->CardID = 5;
@@ -36,17 +36,37 @@ void GameStateCustomization::CreateGeneralCards(std::vector<std::vector<Card*>>&
     tmpvector[0]->CardID = 0;
     tmpvector.push_back(new Card(this->game, Card::CardNames::TigerII));
     tmpvector[1]->CardID = 1;
-    tmpvector.push_back(new Card(this->game, Card::CardNames::IS_2));
+    tmpvector.push_back(new Card(this->game, Card::CardNames::IS_1));
     tmpvector[2]->CardID = 2;
-    tmpvector.push_back(new Card(this->game, Card::CardNames::SU_100));
+    tmpvector.push_back(new Card(this->game, Card::CardNames::KV_1));
     tmpvector[3]->CardID = 3;
-    tmpvector.push_back(new Card(this->game, Card::CardNames::Hetzer));
+    tmpvector.push_back(new Card(this->game, Card::CardNames::MS_1));
     tmpvector[4]->CardID = 4;
-    tmpvector.push_back(new Card(this->game, Card::CardNames::LTvz38));
+    tmpvector.push_back(new Card(this->game, Card::CardNames::SU_152));
     tmpvector[5]->CardID = 5;
-    tmpvector.push_back(new Card(this->game, Card::CardNames::T_34_76));
+    tmpvector.push_back(new Card(this->game, Card::CardNames::ISU_152));
     tmpvector[6]->CardID = 6;
+    tmpvector.push_back(new Card(this->game, Card::CardNames::Panther));
+    tmpvector[7]->CardID = 7;
+
+    generalcards.push_back(tmpvector);
+    tmpvector.clear();
+
+    tmpvector.push_back(new Card(this->game, Card::CardNames::Lowe));
+    tmpvector[0]->CardID = 0;
+    tmpvector.push_back(new Card(this->game, Card::CardNames::MarderI));
+    tmpvector[1]->CardID = 1;
+    tmpvector.push_back(new Card(this->game, Card::CardNames::PzI));
+    tmpvector[2]->CardID = 2;
+    tmpvector.push_back(new Card(this->game, Card::CardNames::StugIIIG));
+    tmpvector[3]->CardID = 3;
     tmpvector.push_back(new Card(this->game, Card::CardNames::T_34_76));
+    tmpvector[4]->CardID = 4;
+    tmpvector.push_back(new Card(this->game, Card::CardNames::T_34_85));
+    tmpvector[5]->CardID = 5;
+    tmpvector.push_back(new Card(this->game, Card::CardNames::PzIII));
+    tmpvector[6]->CardID = 6;
+    tmpvector.push_back(new Card(this->game, Card::CardNames::Panther));
     tmpvector[7]->CardID = 7;
 
     generalcards.push_back(tmpvector);

@@ -63,6 +63,17 @@ void Game::loadalltextures()
     texturemanager.LoadTexture("src/textures/cards/Hetzer.png", "Hetzer");
     texturemanager.LoadTexture("src/textures/cards/TigerII.png", "TigerII");
     texturemanager.LoadTexture("src/textures/cards/PzIII.png", "Pz.III");
+    texturemanager.LoadTexture("src/textures/cards/KV-1.png", "KV-1");
+    texturemanager.LoadTexture("src/textures/cards/IS-1.png", "IS-1");
+    texturemanager.LoadTexture("src/textures/cards/SU-152.png", "SU-152");
+    texturemanager.LoadTexture("src/textures/cards/ISU-152.png", "ISU-152");
+    texturemanager.LoadTexture("src/textures/cards/Panther.png", "Panther");
+    texturemanager.LoadTexture("src/textures/cards/Lowe.png", "Lowe");
+    texturemanager.LoadTexture("src/textures/cards/Marder I.png", "MarderI");
+    texturemanager.LoadTexture("src/textures/cards/PzI.png", "Pz.I");
+    texturemanager.LoadTexture("src/textures/cards/StugIIIG.png", "StugIIIG");
+    texturemanager.LoadTexture("src/textures/Coin.png", "Coin");
+    texturemanager.LoadTexture("src/textures/HitPoint.png", "HitPoint");
 }
 
 Game::Game()

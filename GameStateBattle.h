@@ -35,6 +35,18 @@ class GameStateBattle : public GameState
         Right
     };
 
+    enum class Phase
+    {
+        PlayCards,
+        Attack,
+        Wait
+    };
+
+    enum class WhoPlays
+    {
+        Player1, Player2
+    };
+
     sf::View view;
 
     std::vector<Label*> labels;
@@ -66,10 +78,18 @@ class GameStateBattle : public GameState
     bool Player1FirstTurn = true;
     bool alreadySelected = false; /// For checking if you choose only one card at the time
     bool selectedOnField = false;
+    bool firstTurnOfAllPlayers = true;
 
+    bool movedCard = false;
+    bool placedCard = false;
 
-    int speccounter = 0;
+    WhoPlays whoplays;
 
+    Phase phaseP1 = Phase::PlayCards;
+    Phase phaseP2 = Phase::PlayCards;
+
+    int income1P = 2;
+    int income2P = 2;
 
     int health1P;
     int health2P;
@@ -79,12 +99,10 @@ class GameStateBattle : public GameState
 
     int turnnum = 1;
 
-    int deck1cycle = 0;
     int cardsInHand1 = 0;
     int cardsInDiscardDeck1 = 0;
     int cardsInMainDeck1 = 1;
 
-    int deck2cycle = 0;
     int cardsInHand2 = 0;
     int cardsInDiscardDeck2 = 0;
     int cardsInMainDeck2 = 0;
@@ -100,14 +118,18 @@ class GameStateBattle : public GameState
 
     void PullCard1P(int newposinhand = -1);
     void PlayCard1P(sf::Vector2f slotpos);
+    void DiscardCard1P();
     void ShuffleDiscardedCards1P();
 
     void PullCard2P(int newposinhand = -1);
     void DiscardCard2P();
     void ShuffleDiscardedCards2P();
 
+    void AIplays();
 
     void NextTurn();
+
+    bool FinishedGame();
 public:
 
     virtual void draw (const float dt) override;

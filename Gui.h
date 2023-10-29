@@ -151,6 +151,8 @@ public:
 
     bool isActive = false;
 
+    bool underAttack = false;
+
 public:
     sf::String NAME;
     int numero = -1;

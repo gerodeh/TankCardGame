@@ -12,23 +12,25 @@
 class Card : public GameObject
 {
 public:
-    enum CardNames
+    enum class CardNames
     {
-        T_34_76, T_34_85, IS_2, SU_100, MS_1, LTvz38, TigerI, Hetzer, TigerII, PzIII
+        T_34_76, T_34_85, IS_2, SU_100, MS_1, LTvz38, TigerI, Hetzer, TigerII, PzIII, IS_1, KV_1, SU_152, ISU_152, Panther, Lowe, MarderI, PzI,
+        StugIIIG
     };
-    enum CardTypes
+    enum class CardTypes
     {
         LightTank, MediumTank, HeavyTank, TankDestroyer, Building, AAG, Artillery, Spell
     };
-    enum CardNations
+    enum class CardNations
     {
         Neutral, USSR, USA, UK, France, Wehrmacht
     };
-    enum CardAbilities
+    enum class CardAbilities
     {
-        None, Protection_1_if_1, Damage_1_if_Wehrmacht, ImmediateAttack, Heal_1HP_Ally_After_Play, Protection_1_VS_MT, DodgeLess_1_VS_MT_and_LT
+        None, Protection_1_if_1, Damage_1_if_Wehrmacht, ImmediateAttack, Heal_1HP_Ally_After_Play, Protection_1_VS_MT, DodgeLess_1_VS_MT_and_LT,
+        Ricochet_if_1, Endurance_1_if_enemy_more_than_3, Damage_4_if_MT_and_LT, Only_1_DMG, Get_1_Acr_if_HT
     };
-    enum CardAttackDirections
+    enum class CardAttackDirections
     {
         Forward, ThreeLines, Right, Left
     };
@@ -61,7 +63,13 @@ public:
     bool isSelected = false;
     bool isScaled = false;
     bool isOnField = false;
+    bool hasAttacked = false;
+    bool canShoot = false;
+    bool underAttack = false;
 
+    int posOnField = -1;
+
+    int nextturn = -1;
 
     int posInHand  = -1;
 
@@ -105,6 +113,8 @@ public:
     void InitCard();
 
     void Render(sf::RenderWindow& renderwindow) override;
+
+    void Update();
 
     void setPosition(const sf::Vector2f& position);
 
